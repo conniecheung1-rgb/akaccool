@@ -22,7 +22,7 @@ This project demonstrates foundational data analysis techniques using Python, in
 ## Project Files
 
 - **Data sampling.py** — main script containing all code and sampling techniques
-- **Retail insight.jpynb - the full Google Colab notebook summary
+- Retail insight.jpynb - the full Google Colab notebook summary
   
 ## Next Steps
 
