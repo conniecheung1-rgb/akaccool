@@ -1,0 +1,179 @@
+import numpy as np
+import pandas as pd
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Parameters for the normal distribution
+mean_price = 50      # average price
+std_dev = 10         # standard deviation
+n_samples = 1000     # number of data points
+
+# Generate normally distributed data
+prices = np.random.normal(loc=mean_price, scale=std_dev, size=n_samples)
+
+# Round to 2 decimal places
+prices = np.round(prices, 2)
+
+# Put into a DataFrame for easy handling
+df = pd.DataFrame(prices, columns=["Price"])
+
+print(df.head(10))  # preview first 10 rows
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set style for nicer visuals
+sns.set(style="whitegrid")
+
+# Plot histogram with density curve
+plt.figure(figsize=(8, 5))
+sns.histplot(df["Price"], bins=30, kde=True, color="skyblue")
+
+# Add labels and title
+plt.xlabel("Price")
+plt.ylabel("Frequency")
+plt.title("Distribution of Simulated Prices (Normal)")
+
+plt.show()
+
+import nbformat
+
+# Path to your Jupyter notebook file
+# This was a placeholder, so it's updated to an existing notebook file from the environment.
+notebook_filename = "/content/05_04_NormalDistributions.ipynb"
+
+# Load the notebook
+with open(notebook_filename, "r", encoding="utf-8") as f:
+    nb = nbformat.read(f, as_version=4)
+
+# Example: print all code cells
+for cell in nb.cells:
+    if cell.cell_type == "code":
+        print("Code cell:")
+        print(cell.source)
+        print("-" * 40)
+
+Code cell:
+import numpy as np
+
+def generate_test_scores(mean, std_dev, num_scores):
+    # Generate normally distributed scores
+    scores = np.random.normal(loc=mean, scale=std_dev, size=num_scores)
+
+    # Clip the scores to be within the range [0, 100]
+    scores = np.clip(scores, 0, 100)
+
+    return scores
+
+# Parameters
+mean = 70  # Mean of the distribution
+std_dev = 15  # Standard deviation of the distribution
+num_scores = 100  # Number of test scores to generate
+
+# Generate the test scores
+test_scores = generate_test_scores(mean, std_dev, num_scores)
+
+# Print the test scores
+print(test_scores)
+
+----------------------------------------
+Code cell:
+import numpy as np
+
+def generate_test_scores(mean, std_dev, num_scores):
+    # Generate normally distributed scores
+    scores = np.random.normal(loc=mean, scale=std_dev, size=num_scores)
+
+    # Clip the scores to be within the range [0, 100]
+    scores = np.clip(scores, 0, 100)
+
+    # Round the scores to the nearest integer
+    scores = np.round(scores).astype(int)
+
+    return scores
+
+# Parameters
+mean = 70  # Mean of the distribution
+std_dev = 15  # Standard deviation of the distribution
+num_scores = 100  # Number of test scores to generate
+
+# Generate the test scores
+test_scores = generate_test_scores(mean, std_dev, num_scores)
+
+# Print the test scores
+print(test_scores)
+
+----------------------------------------
+Code cell:
+import numpy as np
+import matplotlib.pyplot as plt
+
+def generate_test_scores(mean, std_dev, num_scores):
+    # Generate normally distributed scores
+    scores = np.random.normal(loc=mean, scale=std_dev, size=num_scores)
+
+    # Clip the scores to be within the range [0, 100]
+    scores = np.clip(scores, 0, 100)
+
+    # Round the scores to the nearest integer
+    scores = np.round(scores).astype(int)
+
+    return scores
+
+def plot_scores_distribution(scores):
+    # Plot a histogram of the scores
+    plt.hist(scores, bins=20, edgecolor='black')
+    plt.title('Distribution of Test Scores')
+    plt.xlabel('Score')
+    plt.ylabel('Frequency')
+    plt.grid(True)
+    plt.show()
+
+# Parameters
+mean = 70  # Mean of the distribution
+std_dev = 15  # Standard deviation of the distribution
+num_scores = 100  # Number of test scores to generate
+
+# Generate the test scores
+test_scores = generate_test_scores(mean, std_dev, num_scores)
+
+# Plot the distribution of the test scores
+plot_scores_distribution(test_scores)
+
+----------------------------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+def generate_test_scores(mean, std_dev, num_scores):
+    # Generate normally distributed scores
+    scores = np.random.normal(loc=mean, scale=std_dev, size=num_scores)
+
+    # Clip the scores to be within the range [0, 100]
+    scores = np.clip(scores, 0, 100)
+
+    # Round the scores to the nearest integer
+    scores = np.round(scores).astype(int)
+
+    return scores
+
+def plot_scores_distribution(scores):
+    # Plot a histogram of the scores
+    plt.hist(scores, bins=20, edgecolor='black')
+    plt.title('Distribution of Test Scores')
+    plt.xlabel('Score')
+    plt.ylabel('Frequency')
+    plt.grid(True)
+    plt.show()
+
+# Parameters
+mean = 70  # Mean of the distribution
+std_dev = 15  # Standard deviation of the distribution
+num_scores = 100  # Number of test scores to generate
+
+# Generate the test scores
+test_scores = generate_test_scores(mean, std_dev, num_scores)
+
+# Plot the distribution of the test scores
+plot_scores_distribution(test_scores)
+
