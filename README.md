@@ -11,6 +11,7 @@ This project demonstrates foundational data analysis techniques using Python, in
 
 ## What I Learned
 
+- How AI and Python can be combined to quickly explore data, compute summary statistics, and deliver isights for decision-makers
 - How to load and explore datasets
 - How to perform different sampling methods
 - How to calculate summary statistics
@@ -21,7 +22,8 @@ This project demonstrates foundational data analysis techniques using Python, in
 ## Project Files
 
 - **Data sampling.py** — main script containing all code and sampling techniques
-
+- **Retail insight.jpynb - the full Google Colab notebook summary
+  
 ## Next Steps
 
 - Add visualizations (matplotlib / seaborn)
