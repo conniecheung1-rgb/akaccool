@@ -1,4 +1,4 @@
-# Data Sampling Project
+# Data Project
 
 This project demonstrates foundational data analysis techniques using Python, including:
 
